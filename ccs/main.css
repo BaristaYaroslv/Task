@@ -1,0 +1,38 @@
+.checkbox{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.toggle_wrap{
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 20px;
+}
+.togglee_button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:bisque;
+    top: 50%;
+    left: 5px;
+    transform: translate(0, -50%);
+    transition: transform 0.25s cubic-bezier(0.4, 0.2, 0.2, 0.4);
+}
+.checkbox:checked +.toggle_wrap .togglee_button{
+    transform: translate(40px,-50%);
+    background-color: green
+}
+.checkbox:checked +.toggle_wrap{
+    background-color: lightslategray;
+}
